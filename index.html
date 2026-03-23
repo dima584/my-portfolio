@@ -6,11 +6,12 @@
     <meta name="description" content="Персональне портфоліо студента Дмитра - навички, проєкти та освіта.">
     <title>Portfolio | Головна</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
-        <h1>Дмитро — Майбутній Senior Python developer з великими амбіціями</h1>
+        <h1>Дмитро — Майбутній Senior Python developer</h1>
         <nav>
             <ul>
                 <li><a href="index_1.html" aria-current="page">Головна</a></li>
@@ -54,17 +55,22 @@
 
         <section id="projects">
             <h2>Проєкти</h2>
-            <article>
-                <h3>Бот з AI асистентами</h3>
-                <img src="images_1/photo_2026-02-11_22-10-24.jpg" alt="Прев'ю боту" width="300">
-                <p>Фітнес бот з великим функціоналом.</p>
-            </article>
-            <article>
-                <h3>Бот з аналізом калорій</h3>
-                <img src="images_1/photo_2026-02-15_02-17-33.jpg" alt="Прев'ю боту" width="300">
-                <a href="https://github.com/dnezolazk41fbmi28-sys/dimunyra">Репозиторій проєкту</a>
-            </article>
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Всі проєкти</button>
+                <button class="filter-btn" data-category="ai">ШІ та Асистенти</button>
+                <button class="filter-btn" data-category="health">Здоров'я</button>
+            </div>
+            <div id="projects-container" class="projects-grid"></div>
         </section>
+        <section id="artworks">
+            <h2>Галерея мистецтв (Чикагський інститут)</h2>
+            <p>Дані підвантажуються динамічно через зовнішнє API.</p>
+            <div id="artworks-container" class="projects-grid">
+                <p>Завантаження шедеврів...</p>
+            </div>
+        </section>
+
+    </main>
     </main>
 
     <footer>
